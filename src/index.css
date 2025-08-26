@@ -8,52 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Bright Casino Theme */
+    /* Clean Modern Theme */
     --background: 0 0% 100%;
-    --foreground: 224 71% 4%;
+    --foreground: 222 84% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
+    --card-foreground: 222 84% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
+    --popover-foreground: 222 84% 10%;
 
-    --primary: 42 87% 45%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 160 84% 35%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 84% 10%;
 
     --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 271 81% 50%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 42 87% 45%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
     /* Casino-specific colors */
-    --casino-gold: 42 87% 45%;
-    --casino-emerald: 160 84% 35%;
-    --casino-purple: 271 81% 50%;
-    --casino-dark: 224 71% 4%;
+    --casino-gold: 43 96% 56%;
+    --casino-emerald: 142 86% 28%;
+    --casino-purple: 271 81% 56%;
+    --casino-dark: 222 84% 10%;
     --casino-card: 0 0% 100%;
 
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(42 87% 55%), hsl(45 93% 47%));
-    --gradient-emerald: linear-gradient(135deg, hsl(160 84% 39%), hsl(158 85% 32%));
-    --gradient-casino: linear-gradient(135deg, hsl(218 23% 8%), hsl(218 20% 12%));
+    --gradient-gold: linear-gradient(135deg, hsl(43 96% 56%), hsl(38 92% 50%));
+    --gradient-emerald: linear-gradient(135deg, hsl(142 86% 28%), hsl(134 61% 41%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(212 100% 47%));
 
     /* Shadows */
-    --shadow-glow: 0 0 20px hsl(var(--casino-gold) / 0.3);
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 
     --radius: 1rem;
 
