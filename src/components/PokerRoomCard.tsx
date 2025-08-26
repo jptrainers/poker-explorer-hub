@@ -15,6 +15,8 @@ export interface PokerRoom {
   tables: number;
   image?: string;
   featured?: boolean;
+  latitude: number;
+  longitude: number;
 }
 
 interface PokerRoomCardProps {

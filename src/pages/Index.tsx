@@ -1,10 +1,12 @@
 import { useState, useMemo } from "react";
 import { PokerRoomGrid } from "@/components/PokerRoomGrid";
+import { PokerRoomMap } from "@/components/PokerRoomMap";
 import { SearchFilters, FilterState } from "@/components/SearchFilters";
 import { PokerRoomModal } from "@/components/PokerRoomModal";
 import { PokerRoom } from "@/components/PokerRoomCard";
 import { pokerRooms, getUniqueCountries, getUniqueGames, getUniqueStakes } from "@/data/pokerRooms";
-import { Spade, Club, Heart, Diamond } from "lucide-react";
+import { Spade, Club, Heart, Diamond, Grid3X3, Map } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [filters, setFilters] = useState<FilterState>({
@@ -16,6 +18,7 @@ const Index = () => {
   
   const [selectedRoom, setSelectedRoom] = useState<PokerRoom | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid');
 
   const filteredRooms = useMemo(() => {
     return pokerRooms.filter(room => {
@@ -101,7 +104,7 @@ const Index = () => {
             availableStakes={getUniqueStakes()}
           />
 
-          {/* Results Count */}
+          {/* Results Count and View Toggle */}
           <div className="flex items-center justify-between">
             <p className="text-muted-foreground">
               {sortedRooms.length === pokerRooms.length
@@ -110,20 +113,50 @@ const Index = () => {
               }
             </p>
             
-            {sortedRooms.filter(r => r.featured).length > 0 && (
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                注目のポーカールーム
+            <div className="flex items-center gap-4">
+              {sortedRooms.filter(r => r.featured).length > 0 && (
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  注目のポーカールーム
+                </div>
+              )}
+              
+              <div className="flex items-center gap-1 border border-border rounded-lg p-1">
+                <Button
+                  variant={viewMode === 'grid' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => setViewMode('grid')}
+                  className="h-8 px-3"
+                >
+                  <Grid3X3 className="w-4 h-4 mr-1" />
+                  グリッド
+                </Button>
+                <Button
+                  variant={viewMode === 'map' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => setViewMode('map')}
+                  className="h-8 px-3"
+                >
+                  <Map className="w-4 h-4 mr-1" />
+                  マップ
+                </Button>
               </div>
-            )}
+            </div>
           </div>
 
-          {/* Poker Room Grid */}
+          {/* Poker Room Content */}
           {sortedRooms.length > 0 ? (
-            <PokerRoomGrid 
-              rooms={sortedRooms}
-              onRoomSelect={handleRoomSelect}
-            />
+            viewMode === 'grid' ? (
+              <PokerRoomGrid 
+                rooms={sortedRooms}
+                onRoomSelect={handleRoomSelect}
+              />
+            ) : (
+              <PokerRoomMap
+                rooms={sortedRooms}
+                onRoomSelect={handleRoomSelect}
+              />
+            )
           ) : (
             <div className="text-center py-16">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted/20 flex items-center justify-center">
