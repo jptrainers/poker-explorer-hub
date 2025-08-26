@@ -8,43 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Casino Dark Theme */
-    --background: 218 23% 8%;
-    --foreground: 42 87% 88%;
+    /* Bright Casino Theme */
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
 
-    --card: 218 20% 12%;
-    --card-foreground: 42 87% 88%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
 
-    --popover: 218 20% 12%;
-    --popover-foreground: 42 87% 88%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
 
-    --primary: 42 87% 55%;
-    --primary-foreground: 218 23% 8%;
+    --primary: 42 87% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 160 84% 39%;
-    --secondary-foreground: 218 23% 8%;
+    --secondary: 160 84% 35%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 218 15% 18%;
-    --muted-foreground: 42 20% 70%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 271 81% 56%;
-    --accent-foreground: 42 87% 88%;
+    --accent: 271 81% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 42 87% 88%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 218 15% 25%;
-    --input: 218 15% 18%;
-    --ring: 42 87% 55%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 42 87% 45%;
 
     --radius: 1rem;
 
     /* Casino-specific colors */
-    --casino-gold: 42 87% 55%;
-    --casino-emerald: 160 84% 39%;
-    --casino-purple: 271 81% 56%;
-    --casino-dark: 218 23% 8%;
-    --casino-card: 218 20% 12%;
+    --casino-gold: 42 87% 45%;
+    --casino-emerald: 160 84% 35%;
+    --casino-purple: 271 81% 50%;
+    --casino-dark: 224 71% 4%;
+    --casino-card: 0 0% 100%;
 
     /* Gradients */
     --gradient-gold: linear-gradient(135deg, hsl(42 87% 55%), hsl(45 93% 47%));
