@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				casino: {
+					gold: 'hsl(var(--casino-gold))',
+					emerald: 'hsl(var(--casino-emerald))',
+					purple: 'hsl(var(--casino-purple))',
+					dark: 'hsl(var(--casino-dark))',
+					card: 'hsl(var(--casino-card))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +69,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-emerald': 'var(--gradient-emerald)',
+				'gradient-casino': 'var(--gradient-casino)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'casino': 'var(--shadow-card)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
